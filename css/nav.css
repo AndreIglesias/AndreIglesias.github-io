@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+/* --------------------------------
+
+Slidebar style
+
+-------------------------------- */
+
+.sidenav {
+	font-family: "VT323";
+	height: 0;
+	width: 70%; /*0*/
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	transition: 0.5s;
+	background-color: #000;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 0;
+	opacity: 0.8;
+}
+
+/* The navigation menu links */
+.sidenav a {
+	padding: 0;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+	margin-left: 50px;
+	margin-top: 10px;
+	width:20%;overflow:hidden;height:25px;line-height:25px;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+#main {
+	transition: margin-left 1s, margin-top 1s;
+	padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 45px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+a.barrs
+{
+	z-index: 1;
+	width: 45px;
+	heigh: 35px;
+	position: fixed;
+	cursor: pointer;
+}
+
+
+/* -------------------------------------
+TERMINAL
+---------------------------------------*/
+
+/* Style the accordion panel. Note: hidden by default */
+
+a.accordion:hover
+{
+	cursor: pointer;
+}
+
+.panel {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  display: none;
+  position: absolute;
+  top: 23px;
+  left: 47%;
+  width:100%;
+  overflow:hidden;
+}
+
+.panel:hover {
+	display: block;
+}
+
+.panel a {
+	color: #33ff00;
+	width: 40%;
+}
+.container {
+	position: relative;
+}
+
+.hyper {
+	color: aqua !important;
+}
+
+.selectpan {
+	background-color: #33ff00;
+	color: black !important;
+}
+
+.selected {
+	Background-color: aqua;
+	color: black !important;
+}
+
+/*----------------------------------------------
+overlay
+----------------------------------------------*/
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.overlay-data {
+  opacity: 0;
+  visibility: hidden;
+}
+.overlay-open {
+  visibility: visible;
+}

@@ -1,0 +1,152 @@
+<html>
+  <head>
+	<!--<meta http-equiv="refresh" content="5">-->
+	<meta charset="utf-8">
+	<title> Sudoku Solver </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" media="screen" href="css/sudoku.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+
+	<div class="container">
+	  <div class="well well-lg">
+		<h1 class="text-center">Sudoku Solver</h1>
+		<form class="text-center" id="inputField" role="form">
+		  <input type="number" min="0" max="9" name="000">
+		  <input type="number" min="0" max="9" name="001">
+		  <input type="number" min="0" max="9" name="002">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="003">
+		  <input type="number" min="0" max="9" name="004">
+		  <input type="number" min="0" max="9" name="005">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="006">
+		  <input type="number" min="0" max="9" name="007">
+		  <input type="number" min="0" max="9" name="008">
+
+		  <br>
+		  <input type="number" min="0" max="9" name="010">
+		  <input type="number" min="0" max="9" name="011">
+		  <input type="number" min="0" max="9" name="012">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="013">
+		  <input type="number" min="0" max="9" name="014">
+		  <input type="number" min="0" max="9" name="015">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="016">
+		  <input type="number" min="0" max="9" name="017">
+		  <input type="number" min="0" max="9" name="018">
+
+		  <br>
+		  <input type="number" min="0" max="9" name="020">
+		  <input type="number" min="0" max="9" name="021">
+		  <input type="number" min="0" max="9" name="022">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="023">
+		  <input type="number" min="0" max="9" name="024">
+		  <input type="number" min="0" max="9" name="025">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="026">
+		  <input type="number" min="0" max="9" name="027">
+		  <input type="number" min="0" max="9" name="028">
+
+		  <br>
+		  <br>
+<!--------------------------------------------------------->
+
+		  <input type="number" min="0" max="9" name="100">
+		  <input type="number" min="0" max="9" name="101">
+		  <input type="number" min="0" max="9" name="102">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="103">
+		  <input type="number" min="0" max="9" name="104">
+		  <input type="number" min="0" max="9" name="105">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="106">
+		  <input type="number" min="0" max="9" name="107">
+		  <input type="number" min="0" max="9" name="108">
+
+		  <br>
+		  <input type="number" min="0" max="9" name="110">
+		  <input type="number" min="0" max="9" name="111">
+		  <input type="number" min="0" max="9" name="112">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="113">
+		  <input type="number" min="0" max="9" name="114">
+		  <input type="number" min="0" max="9" name="115">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="116">
+		  <input type="number" min="0" max="9" name="117">
+		  <input type="number" min="0" max="9" name="118">
+
+		  <br>
+		  <input type="number" min="0" max="9" name="120">
+		  <input type="number" min="0" max="9" name="121">
+		  <input type="number" min="0" max="9" name="122">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="123">
+		  <input type="number" min="0" max="9" name="124">
+		  <input type="number" min="0" max="9" name="125">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="126">
+		  <input type="number" min="0" max="9" name="127">
+		  <input type="number" min="0" max="9" name="128">
+
+		  <br>
+		  <br>
+<!----------------------------------------------------->
+
+		  <input type="number" min="0" max="9" name="200">
+		  <input type="number" min="0" max="9" name="201">
+		  <input type="number" min="0" max="9" name="202">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="203">
+		  <input type="number" min="0" max="9" name="204">
+		  <input type="number" min="0" max="9" name="205">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="206">
+		  <input type="number" min="0" max="9" name="207">
+		  <input type="number" min="0" max="9" name="208">
+
+		  <br>
+		  <input type="number" min="0" max="9" name="210">
+		  <input type="number" min="0" max="9" name="211">
+		  <input type="number" min="0" max="9" name="212">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="213">
+		  <input type="number" min="0" max="9" name="214">
+		  <input type="number" min="0" max="9" name="215">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="216">
+		  <input type="number" min="0" max="9" name="217">
+		  <input type="number" min="0" max="9" name="218">
+
+		  <br>
+		  <input type="number" min="0" max="9" name="220">
+		  <input type="number" min="0" max="9" name="221">
+		  <input type="number" min="0" max="9" name="222">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="223">
+		  <input type="number" min="0" max="9" name="224">
+		  <input type="number" min="0" max="9" name="225">
+		  &nbsp;
+		  <input type="number" min="0" max="9" name="226">
+		  <input type="number" min="0" max="9" name="227">
+		  <input type="number" min="0" max="9" name="228">
+
+		  <br>
+		  <br>
+
+		  <input type="button" onclick="solve()" value="calculate" name="calculate" class="btn btn-info">
+		</form>
+
+	  </div>
+	</div>
+	<script type="text/javascript" src="js/sudoku.js"></script>
+  </body>
+</html>

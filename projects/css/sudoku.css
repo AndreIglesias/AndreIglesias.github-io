@@ -1,0 +1,27 @@
+:focus {
+outline: 0;
+}
+*, *::after, *::before
+{
+  box-sizing: border-box;
+}
+
+html, body
+{
+	overflow-x: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+	--size: 5%;
+	width: var(--size);
+	height: var(--size);
+	text-align: center;
+	font-size: x-large;
+}
